@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmru2xipgbu25"]
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_tqaxj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oe008"]
+albedo_color = Color(1, 0.0235294, 0.0117647, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l8q61"]
+material = SubResource("StandardMaterial3D_oe008")
+
+[node name="porte verouiler" type="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 0, 0, -1, 1, -4.37114e-08, 0, 5.98976, 0, -15)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_l8q61")
