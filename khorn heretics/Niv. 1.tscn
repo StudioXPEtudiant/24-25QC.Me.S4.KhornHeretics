@@ -1,0 +1,2442 @@
+[gd_scene load_steps=12 format=3 uid="uid://dt17lh3j3fkor"]
+
+[ext_resource type="PackedScene" uid="uid://bmru2xipgbu25" path="res://porte_verouiler.tscn" id="1_c0p63"]
+[ext_resource type="PackedScene" uid="uid://d0ibjuqwymhn" path="res://porte.tscn" id="2_cyvka"]
+[ext_resource type="PackedScene" uid="uid://c0yj04rnu0tsm" path="res://mur.tscn" id="3_cx13x"]
+[ext_resource type="PackedScene" uid="uid://bcsjl6f0qf87l" path="res://sol.tscn" id="4_gd0hk"]
+[ext_resource type="PackedScene" uid="uid://blu2ry451bmgm" path="res://TEST.tscn" id="5_fleoh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mtbd3"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_r21cn"]
+font_size = 40
+font_color = Color(0.73098, 0, 0.0849031, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8acdy"]
+albedo_color = Color(0.633757, 0.633757, 0.633757, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_r1sxm"]
+material = SubResource("StandardMaterial3D_8acdy")
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_tqaxj"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mltuo"]
+
+[node name="niv1" type="Node3D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 84.0
+offset_bottom = 69.0
+text = "vie:"
+label_settings = SubResource("LabelSettings_mtbd3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6, -2)
+light_color = Color(1, 1, 0.839216, 1)
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 84.0
+offset_top = 14.0
+offset_right = 224.0
+offset_bottom = 83.0
+text = "llllllllll"
+label_settings = SubResource("LabelSettings_r21cn")
+
+[node name="portes" type="Node3D" parent="."]
+
+[node name="portes veroulier" type="Node3D" parent="portes"]
+
+[node name="porte verouiler" parent="portes/portes veroulier" instance=ExtResource("1_c0p63")]
+
+[node name="porte verouiler5" parent="portes/portes veroulier" instance=ExtResource("1_c0p63")]
+transform = Transform3D(-1, 8.74228e-08, 0, 0, 0, -1, -8.74228e-08, -1, 0, 8.98976, 0, -30)
+
+[node name="porte verouiler2" parent="portes/portes veroulier" instance=ExtResource("1_c0p63")]
+transform = Transform3D(1, -1.42109e-14, 0, 0, 0, -1, 1.42109e-14, 1, 0, 10.9898, 0, -32)
+
+[node name="porte verouiler3" parent="portes/portes veroulier" instance=ExtResource("1_c0p63")]
+transform = Transform3D(0, 1, 0, 0, 0, -1, -1, 0, 0, 43.9898, 0, -35)
+
+[node name="porte verouiler4" parent="portes/portes veroulier" instance=ExtResource("1_c0p63")]
+transform = Transform3D(-1, -4.37114e-08, 0, 0, 0, -1, 4.37114e-08, -1, 0, 48.9898, 0, -30)
+
+[node name="StaticBody3D10" parent="portes" instance=ExtResource("2_cyvka")]
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="portes"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.98976, 0, -25)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D11"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D11"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="portes"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 6.98976, 0, -24)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D12"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D12"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D16" type="StaticBody3D" parent="portes"]
+transform = Transform3D(-5.96046e-08, -1, 0, 1, -5.96046e-08, 0, 0, 0, 1, 4.98976, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D16"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D16"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D21" type="StaticBody3D" parent="portes"]
+transform = Transform3D(-4.37114e-08, -1, 0, 0, 0, -1, 1, -4.37114e-08, 0, 8.98976, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D21"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D21"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D28" type="StaticBody3D" parent="portes"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 10.9898, 0, -8)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D28"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D28"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D32" type="StaticBody3D" parent="portes"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 4.98976, 0, -10)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D32"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D32"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D33" type="StaticBody3D" parent="portes"]
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 7.98976, 0, -35)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D33"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D33"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D37" type="StaticBody3D" parent="portes"]
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 5.98976, 0, -41)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D37"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D37"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D36" type="StaticBody3D" parent="portes"]
+transform = Transform3D(-5.73206e-15, 1.31134e-07, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, 1.31134e-07, 3.98976, 0, -29)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D36"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D36"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D34" type="StaticBody3D" parent="portes"]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 15.9898, 0, -27)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D34"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D34"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D43" type="StaticBody3D" parent="portes"]
+transform = Transform3D(1.91068e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 15.9898, 0, -37)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D43"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D43"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D35" type="StaticBody3D" parent="portes"]
+transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 16.9898, 0, -30)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D35"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D35"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D38" type="StaticBody3D" parent="portes"]
+transform = Transform3D(1.91068e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 43.9898, 0, -43)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D38"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D38"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D39" type="StaticBody3D" parent="portes"]
+transform = Transform3D(1.91068e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 43.9898, 0, -39)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D39"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D39"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D42" type="StaticBody3D" parent="portes"]
+transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 52.9898, 0, -30)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D42"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D42"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D40" type="StaticBody3D" parent="portes"]
+transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 44.9898, 0, -40)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D40"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D40"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D41" type="StaticBody3D" parent="portes"]
+transform = Transform3D(-5.73206e-15, 1.31134e-07, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, 1.31134e-07, 55.9898, 0, -39)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="portes/StaticBody3D41"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portes/StaticBody3D41"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="murs" type="Node3D" parent="."]
+
+[node name="murs 1" type="Node3D" parent="murs"]
+
+[node name="StaticBody3D10" parent="murs/murs 1" instance=ExtResource("3_cx13x")]
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(-1.22392e-07, 1, 0, -2.8, -4.37114e-08, 0, 0, 0, 1, -3.00738, 1, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D11"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D11"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(-1.22392e-07, 1, 0, -2.8, -4.37114e-08, 0, 0, 0, 1, -3.00738, 1, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D12"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D12"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D13" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(5.34992e-15, -4.37114e-08, -1, -2.8, -4.37114e-08, 0, -1.22392e-07, 1, -4.37114e-08, -2.00738, 1, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D13"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D13"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D14" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(5.34992e-15, -4.37114e-08, -1, -2.8, -4.37114e-08, 0, -1.22392e-07, 1, -4.37114e-08, 1.99262, 1, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D14"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D14"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D15" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(1.22392e-07, -1, 8.74228e-08, -2.8, -4.37114e-08, 0, 1.06998e-14, -8.74228e-08, -1, 2.99262, 1, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D15"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D15"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D16" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(1.22392e-07, -1, 8.74228e-08, -2.8, -4.37114e-08, 0, 1.06998e-14, -8.74228e-08, -1, 2.99262, 1, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D16"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D16"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D17" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(1.22392e-07, -1, 8.74228e-08, -2.8, -4.37114e-08, 0, 1.06998e-14, -8.74228e-08, -1, 2.99262, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D17"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D17"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D18" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(-1.60498e-14, 1.31134e-07, 1, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 1.31134e-07, 1.99262, 1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D18"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D18"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D19" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(-1.60498e-14, 1.31134e-07, 1, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 1.31134e-07, -0.00738049, 1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D19"]
+transform = Transform3D(1, 4.57242e-09, 1.10388e-08, 4.57242e-09, 0.707107, -0.707107, -1.10388e-08, 0.707107, 0.707107, 0, -1, -1)
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D19"]
+transform = Transform3D(1, 4.57242e-09, -1.10388e-08, 4.57242e-09, 0.707107, 0.707107, 1.10388e-08, -0.707107, 0.707107, 0, -1, 1)
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D19"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D20" type="StaticBody3D" parent="murs/murs 1"]
+transform = Transform3D(-1.60498e-14, 1.31134e-07, 1, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 1.31134e-07, -2.00738, 1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/murs 1/StaticBody3D20"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/murs 1/StaticBody3D20"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="mur 2" type="Node3D" parent="murs"]
+
+[node name="StaticBody3D21" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(1.22392e-07, -1, 8.74228e-08, -2.8, -4.37114e-08, 0, 1.06998e-14, -8.74228e-08, -1, 0.99262, 1, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D21"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D21"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D22" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(1.22392e-07, -1, 8.74228e-08, -2.8, -4.37114e-08, 0, 1.06998e-14, -8.74228e-08, -1, 0.99262, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D22"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D22"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D23" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(1.22392e-07, -1, 8.74228e-08, -2.8, -4.37114e-08, 0, 1.06998e-14, -8.74228e-08, -1, 0.99262, 1, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D23"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D23"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D31" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(-1.60498e-14, 1.31134e-07, 1, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 1.31134e-07, 1.99262, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D31"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D31"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D32" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(-1.60498e-14, 1.31134e-07, 1, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 1.31134e-07, 3.99262, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D32"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D32"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D24" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(-1.22392e-07, 1, 0, -2.8, -4.37114e-08, 0, 0, 0, 1, -1.00738, 1, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D24"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D24"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D25" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(-1.22392e-07, 1, 0, -2.8, -4.37114e-08, 0, 0, 0, 1, -1.00738, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D25"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D25"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D26" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(-1.22392e-07, 1, 0, -2.8, -4.37114e-08, 0, 0, 0, 1, -1.00738, 1, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D26"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D26"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D27" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(-1.22392e-07, 1, 0, -2.8, -4.37114e-08, 0, 0, 0, 1, -1.00738, 1, -12)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D27"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D27"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D28" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(0, 0, -1, -2.8, -4.37114e-08, 9.1951e-16, -1.22392e-07, 1, 0, -0.00738049, 1, -13)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D28"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D28"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D29" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(0, 0, -1, -2.8, -4.37114e-08, 9.1951e-16, -1.22392e-07, 1, 0, 1.99262, 1, -13)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D29"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D29"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D30" type="StaticBody3D" parent="murs/mur 2"]
+transform = Transform3D(0, 0, -1, -2.8, -4.37114e-08, 9.1951e-16, -1.22392e-07, 1, 0, 3.99262, 1, -13)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 2/StaticBody3D30"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 2/StaticBody3D30"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="mur 3" type="Node3D" parent="murs"]
+
+[node name="StaticBody3D33" type="StaticBody3D" parent="murs/mur 3"]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 4.99262, 1, -14)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 3/StaticBody3D33"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 3/StaticBody3D33"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D34" type="StaticBody3D" parent="murs/mur 3"]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59441e-15, -1.17225e-07, -1, 8.99262, 1, -14)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 3/StaticBody3D34"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 3/StaticBody3D34"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D35" type="StaticBody3D" parent="murs/mur 3"]
+transform = Transform3D(-1.75551e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 7.99262, 1, -15)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 3/StaticBody3D35"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 3/StaticBody3D35"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D38" type="StaticBody3D" parent="murs/mur 3"]
+transform = Transform3D(-1.75551e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 7.99262, 1, -15)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 3/StaticBody3D38"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 3/StaticBody3D38"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D36" type="StaticBody3D" parent="murs/mur 3"]
+transform = Transform3D(-8.94433e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 7.99262, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 3/StaticBody3D36"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 3/StaticBody3D36"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D37" type="StaticBody3D" parent="murs/mur 3"]
+transform = Transform3D(-8.94433e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 5.99262, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/mur 3/StaticBody3D37"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/mur 3/StaticBody3D37"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="4" type="Node3D" parent="murs"]
+
+[node name="StaticBody3D39" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-8.94433e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 9.99262, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D39"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D39"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D40" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-8.94433e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 11.9926, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D40"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D40"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D41" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-8.94433e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 13.9926, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D41"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D41"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D42" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42942e-14, 2.04648e-07, 1, 14.9926, 1, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D42"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D42"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D43" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(1.42109e-14, -2.23517e-07, -1, -2.8, -4.37114e-08, 1.1659e-15, -1.22392e-07, 1, -2.23517e-07, 13.9926, 1, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D43"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D43"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D44" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(1.42109e-14, -2.23517e-07, -1, -2.8, -4.37114e-08, 1.1659e-15, -1.22392e-07, 1, -2.23517e-07, 11.9926, 1, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D44"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D44"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D45" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-2.49107e-14, 3.1094e-07, 1, -2.8, -4.37114e-08, 1.1659e-15, 1.22392e-07, -1, 3.1094e-07, 11.9926, 1, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D45"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D45"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D46" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-2.49107e-14, 3.1094e-07, 1, -2.8, -4.37114e-08, 1.1659e-15, 1.22392e-07, -1, 3.1094e-07, 13.9926, 1, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D46"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D46"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D47" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-2.49107e-14, 3.1094e-07, 1, -2.8, -4.37114e-08, 1.1659e-15, 1.22392e-07, -1, 3.1094e-07, 15.9926, 1, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D47"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D47"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D48" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(1.22392e-07, -1, 2.67229e-07, -2.8, -4.37114e-08, 1.1659e-15, 9.61317e-15, -2.67229e-07, -1, 16.9926, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D48"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D48"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D49" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(1.22392e-07, -1, 2.67229e-07, -2.8, -4.37114e-08, 1.1659e-15, 9.61317e-15, -2.67229e-07, -1, 16.9926, 1, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D49"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D49"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D50" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(1.22392e-07, -1, 2.67229e-07, -2.8, -4.37114e-08, 1.1659e-15, 9.61317e-15, -2.67229e-07, -1, 16.9926, 1, -12)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D50"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D50"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D51" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-5.68435e-15, -2.23517e-07, -1, -2.8, -4.37114e-08, 1.16589e-15, -1.22392e-07, 1, -2.23517e-07, 15.9926, 1, -13)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D51"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D51"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D52" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-5.68435e-15, -2.23517e-07, -1, -2.8, -4.37114e-08, 1.16589e-15, -1.22392e-07, 1, -2.23517e-07, 13.9926, 1, -13)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D52"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D52"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D53" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-5.68435e-15, -2.23517e-07, -1, -2.8, -4.37114e-08, 1.16589e-15, -1.22392e-07, 1, -2.23517e-07, 11.9926, 1, -13)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D53"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D53"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D54" type="StaticBody3D" parent="murs/4"]
+transform = Transform3D(-5.68435e-15, -2.23517e-07, -1, -2.8, -4.37114e-08, 1.16589e-15, -1.22392e-07, 1, -2.23517e-07, 9.99262, 1, -13)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/4/StaticBody3D54"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/4/StaticBody3D54"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="5" type="Node3D" parent="murs"]
+
+[node name="StaticBody3D55" type="StaticBody3D" parent="murs/5"]
+transform = Transform3D(-2.49107e-14, 3.1094e-07, 1, -2.8, -4.37114e-08, 1.1659e-15, 1.22392e-07, -1, 3.1094e-07, 9.99262, 1, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/5/StaticBody3D55"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/5/StaticBody3D55"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D56" type="StaticBody3D" parent="murs/5"]
+transform = Transform3D(-2.49107e-14, 3.1094e-07, 1, -2.8, -4.37114e-08, 1.1659e-15, 1.22392e-07, -1, 3.1094e-07, 7.99262, 1, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/5/StaticBody3D56"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/5/StaticBody3D56"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D57" type="StaticBody3D" parent="murs/5"]
+transform = Transform3D(-1.22392e-07, 1, -3.54652e-07, -2.8, -4.37114e-08, 1.1659e-15, -4.02082e-14, 3.54652e-07, 1, 6.99262, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/5/StaticBody3D57"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/5/StaticBody3D57"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D62" type="StaticBody3D" parent="murs/5"]
+transform = Transform3D(-2.49107e-14, 3.1094e-07, 1, -2.8, -4.37114e-08, 1.1659e-15, 1.22392e-07, -1, 3.1094e-07, 5.99262, 1, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/5/StaticBody3D62"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/5/StaticBody3D62"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D58" type="StaticBody3D" parent="murs/5"]
+transform = Transform3D(5.55057e-14, -3.98363e-07, -1, -2.8, -4.37114e-08, 1.1659e-15, -1.22392e-07, 1, -3.98363e-07, 5.99262, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/5/StaticBody3D58"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/5/StaticBody3D58"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D59" type="StaticBody3D" parent="murs/5"]
+transform = Transform3D(5.55057e-14, -3.98363e-07, -1, -2.8, -4.37114e-08, 1.1659e-15, -1.22392e-07, 1, -3.98363e-07, 7.99262, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/5/StaticBody3D59"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/5/StaticBody3D59"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D60" type="StaticBody3D" parent="murs/5"]
+transform = Transform3D(5.55057e-14, -3.98363e-07, -1, -2.8, -4.37114e-08, 1.1659e-15, -1.22392e-07, 1, -3.98363e-07, 9.99262, 1, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/5/StaticBody3D60"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/5/StaticBody3D60"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D61" type="StaticBody3D" parent="murs/5"]
+transform = Transform3D(1.22392e-07, -1, 4.42074e-07, -2.8, -4.37114e-08, 1.1659e-15, 7.08032e-14, -4.42074e-07, -1, 8.99262, 1, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/5/StaticBody3D61"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/5/StaticBody3D61"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="6" type="Node3D" parent="murs"]
+
+[node name="StaticBody3D63" type="StaticBody3D" parent="murs/6"]
+transform = Transform3D(-2.49107e-14, 3.1094e-07, 1, -2.8, -4.37114e-08, 1.1659e-15, 1.22392e-07, -1, 3.1094e-07, 3.99262, 1, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/6/StaticBody3D63"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/6/StaticBody3D63"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D64" type="StaticBody3D" parent="murs/6"]
+transform = Transform3D(1.22392e-07, -1, 2.67229e-07, -2.8, -4.37114e-08, 1.1659e-15, 9.61316e-15, -2.67229e-07, -1, 2.99262, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/6/StaticBody3D64"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/6/StaticBody3D64"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D65" type="StaticBody3D" parent="murs/6"]
+transform = Transform3D(-2.49107e-14, 3.1094e-07, 1, -2.8, -4.37114e-08, 1.1659e-15, 1.22392e-07, -1, 3.1094e-07, 1.99262, 1, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/6/StaticBody3D65"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/6/StaticBody3D65"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D66" type="StaticBody3D" parent="murs/6"]
+transform = Transform3D(5.55057e-14, -3.98363e-07, -1, -2.8, -4.37114e-08, 1.1659e-15, -1.22392e-07, 1, -3.98363e-07, 3.99262, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/6/StaticBody3D66"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/6/StaticBody3D66"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D67" type="StaticBody3D" parent="murs/6"]
+transform = Transform3D(5.55057e-14, -3.98363e-07, -1, -2.8, -4.37114e-08, 1.1659e-15, -1.22392e-07, 1, -3.98363e-07, 1.99262, 1, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/6/StaticBody3D67"]
+mesh = SubResource("PlaneMesh_r1sxm")
+skeleton = NodePath("../../StaticBody3D66")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/6/StaticBody3D67"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D68" type="StaticBody3D" parent="murs/6"]
+transform = Transform3D(-1.22392e-07, 1, -3.54652e-07, -2.8, -4.37114e-08, 1.1659e-15, -4.02082e-14, 3.54652e-07, 1, 0.99262, 1, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/6/StaticBody3D68"]
+mesh = SubResource("PlaneMesh_r1sxm")
+skeleton = NodePath("../../StaticBody3D66")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/6/StaticBody3D68"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D69" type="StaticBody3D" parent="murs/6"]
+transform = Transform3D(-1.22392e-07, 1, -3.54652e-07, -2.8, -4.37114e-08, 1.1659e-15, -4.02082e-14, 3.54652e-07, 1, 0.99262, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/6/StaticBody3D69"]
+mesh = SubResource("PlaneMesh_r1sxm")
+skeleton = NodePath("../../StaticBody3D66")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/6/StaticBody3D69"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="7" type="Node3D" parent="murs"]
+
+[node name="StaticBody3D39" type="StaticBody3D" parent="murs/7"]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 4.99262, 1, -16)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/7/StaticBody3D39"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/7/StaticBody3D39"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D40" parent="murs/7" instance=ExtResource("3_cx13x")]
+
+[node name="StaticBody3D41" type="StaticBody3D" parent="murs/7"]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 4.99262, 1, -20)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/7/StaticBody3D41"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/7/StaticBody3D41"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D42" type="StaticBody3D" parent="murs/7"]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 4.99262, 1, -22)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/7/StaticBody3D42"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/7/StaticBody3D42"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D43" parent="murs/7" instance=ExtResource("3_cx13x")]
+
+[node name="StaticBody3D48" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 4.99262, 1, -26)
+
+[node name="StaticBody3D49" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 4.99262, 1, -28)
+
+[node name="StaticBody3D50" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 4.99262, 1, -30)
+
+[node name="StaticBody3D120" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 2.99262, 1, -30)
+
+[node name="StaticBody3D122" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 2.99262, 1, -32)
+
+[node name="StaticBody3D123" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 3.99262, 1, -33)
+
+[node name="StaticBody3D124" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 5.99262, 1, -33)
+
+[node name="StaticBody3D125" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 9.99262, 1, -33)
+
+[node name="StaticBody3D126" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23191e-16, 2.49941e-14, -2.92071e-07, -1, 8.99262, 1, -34)
+
+[node name="StaticBody3D127" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -3.79493e-07, -2.8, -4.37114e-08, 1.23191e-16, -3.5694e-14, 3.79493e-07, 1, 6.99262, 1, -34)
+
+[node name="StaticBody3D121" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 4.99262, 1, -30)
+
+[node name="StaticBody3D128" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 4.99262, 1, -28)
+
+[node name="StaticBody3D129" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 4.99262, 1, -26)
+
+[node name="StaticBody3D130" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 4.99262, 1, -24)
+
+[node name="StaticBody3D131" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 3.99262, 1, -23)
+
+[node name="StaticBody3D132" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 1.99262, 1, -23)
+
+[node name="StaticBody3D133" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 0.99262, 1, -24)
+
+[node name="StaticBody3D147" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, -0.00738001, 1, -25)
+
+[node name="StaticBody3D148" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, -1.00738, 1, -26)
+
+[node name="StaticBody3D149" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, -1.00738, 1, -28)
+
+[node name="StaticBody3D150" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, -0.00738001, 1, -29)
+
+[node name="StaticBody3D151" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 0.99262, 1, -30)
+
+[node name="StaticBody3D152" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 0.99262, 1, -32)
+
+[node name="StaticBody3D153" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 0.99262, 1, -34)
+
+[node name="StaticBody3D154" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 0.99262, 1, -36)
+
+[node name="StaticBody3D155" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 0.99262, 1, -38)
+
+[node name="StaticBody3D156" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 1.99262, 1, -39)
+
+[node name="StaticBody3D157" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 2.99262, 1, -40)
+
+[node name="StaticBody3D158" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 3.99262, 1, -41)
+
+[node name="StaticBody3D163" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 4.99262, 1, -42)
+
+[node name="StaticBody3D164" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 5.99262, 1, -43)
+
+[node name="StaticBody3D165" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 7.99262, 1, -43)
+
+[node name="StaticBody3D166" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 9.99262, 1, -43)
+
+[node name="StaticBody3D167" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 11.9926, 1, -43)
+
+[node name="StaticBody3D159" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -2.48359e-07, 7.99262, 1, -41)
+
+[node name="StaticBody3D168" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 7.99262, 1, -41)
+
+[node name="StaticBody3D169" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 9.99262, 1, -41)
+
+[node name="StaticBody3D170" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 11.9926, 1, -41)
+
+[node name="StaticBody3D171" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 13.9926, 1, -41)
+
+[node name="StaticBody3D172" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 14.9926, 1, -42)
+
+[node name="StaticBody3D173" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 14.9926, 1, -44)
+
+[node name="StaticBody3D175" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 44.9926, 1, -44)
+
+[node name="StaticBody3D181" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 44.9926, 1, -42)
+
+[node name="StaticBody3D184" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35136e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35136e-08, 45.9926, 1, -41)
+
+[node name="StaticBody3D185" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35136e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35136e-08, 47.9926, 1, -41)
+
+[node name="StaticBody3D186" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35136e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35136e-08, 49.9926, 1, -41)
+
+[node name="StaticBody3D187" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35136e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35136e-08, 51.9926, 1, -41)
+
+[node name="StaticBody3D188" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 52.9926, 1, -40)
+
+[node name="StaticBody3D189" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 52.9926, 1, -38)
+
+[node name="StaticBody3D190" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35136e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35136e-08, 53.9926, 1, -37)
+
+[node name="StaticBody3D191" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98022e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98022e-08, 1, 54.9926, 1, -38)
+
+[node name="StaticBody3D202" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39092e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39092e-08, 53.9926, 1, -39)
+
+[node name="StaticBody3D203" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98022e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98022e-08, 1, 52.9926, 1, -40)
+
+[node name="StaticBody3D204" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98022e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98022e-08, 1, 52.9926, 1, -42)
+
+[node name="StaticBody3D205" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35136e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35136e-08, 53.9926, 1, -43)
+
+[node name="StaticBody3D206" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35136e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35136e-08, 55.9926, 1, -43)
+
+[node name="StaticBody3D207" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 56.9926, 1, -42)
+
+[node name="StaticBody3D208" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 56.9926, 1, -40)
+
+[node name="StaticBody3D192" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 56.9926, 1, -38)
+
+[node name="StaticBody3D193" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 56.9926, 1, -36)
+
+[node name="StaticBody3D194" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 55.9926, 1, -35)
+
+[node name="StaticBody3D195" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 53.9926, 1, -35)
+
+[node name="StaticBody3D196" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 51.9926, 1, -35)
+
+[node name="StaticBody3D197" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 50.9926, 1, -36)
+
+[node name="StaticBody3D198" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 50.9926, 1, -38)
+
+[node name="StaticBody3D199" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-2.13163e-14, 2.5332e-07, 1, -2.8, -4.37114e-08, 1.84787e-16, 1.22392e-07, -1, 2.5332e-07, 49.9926, 1, -39)
+
+[node name="StaticBody3D200" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-2.13163e-14, 2.5332e-07, 1, -2.8, -4.37114e-08, 1.84787e-16, 1.22392e-07, -1, 2.5332e-07, 47.9926, 1, -39)
+
+[node name="StaticBody3D201" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-2.13163e-14, 2.5332e-07, 1, -2.8, -4.37114e-08, 1.84787e-16, 1.22392e-07, -1, 2.5332e-07, 45.9926, 1, -39)
+
+[node name="StaticBody3D176" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 44.9926, 1, -46)
+
+[node name="StaticBody3D177" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35136e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35136e-08, 43.9926, 1, -47)
+
+[node name="StaticBody3D178" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35136e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35136e-08, 41.9926, 1, -47)
+
+[node name="StaticBody3D179" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 41.9926, 1, -45)
+
+[node name="StaticBody3D180" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 42.9926, 1, -44)
+
+[node name="StaticBody3D182" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 42.9926, 1, -42)
+
+[node name="StaticBody3D183" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 42.9926, 1, -40)
+
+[node name="StaticBody3D209" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 42.9926, 1, -38)
+
+[node name="StaticBody3D210" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 42.9926, 1, -36)
+
+[node name="StaticBody3D211" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23192e-16, 2.49941e-14, -2.92071e-07, -1, 44.9926, 1, -36)
+
+[node name="StaticBody3D213" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23192e-16, -1.22392e-07, 1, -2.48359e-07, 45.9926, 1, -35)
+
+[node name="StaticBody3D214" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23192e-16, -1.22392e-07, 1, -2.48359e-07, 47.9926, 1, -35)
+
+[node name="StaticBody3D215" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23192e-16, -1.22392e-07, 1, -2.48359e-07, 41.9926, 1, -35)
+
+[node name="StaticBody3D216" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23192e-16, -1.22392e-07, 1, -2.48359e-07, 39.9926, 1, -35)
+
+[node name="StaticBody3D217" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-3.0344e-14, 3.35782e-07, 1, -2.8, -4.37114e-08, 1.23192e-16, 1.22392e-07, -1, 3.35782e-07, 39.9926, 1, -27)
+
+[node name="StaticBody3D218" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-3.0344e-14, 3.35782e-07, 1, -2.8, -4.37114e-08, 1.23192e-16, 1.22392e-07, -1, 3.35782e-07, 41.9926, 1, -27)
+
+[node name="StaticBody3D219" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-3.0344e-14, 3.35782e-07, 1, -2.8, -4.37114e-08, 1.23192e-16, 1.22392e-07, -1, 3.35782e-07, 43.9926, 1, -27)
+
+[node name="StaticBody3D220" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-3.0344e-14, 3.35782e-07, 1, -2.8, -4.37114e-08, 1.23192e-16, 1.22392e-07, -1, 3.35782e-07, 45.9926, 1, -27)
+
+[node name="StaticBody3D221" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-3.0344e-14, 3.35782e-07, 1, -2.8, -4.37114e-08, 1.23192e-16, 1.22392e-07, -1, 3.35782e-07, 47.9926, 1, -27)
+
+[node name="StaticBody3D229" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-3.0344e-14, 3.35782e-07, 1, -2.8, -4.37114e-08, 1.23192e-16, 1.22392e-07, -1, 3.35782e-07, 49.9926, 1, -29)
+
+[node name="StaticBody3D230" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-3.0344e-14, 3.35782e-07, 1, -2.8, -4.37114e-08, 1.23192e-16, 1.22392e-07, -1, 3.35782e-07, 51.9926, 1, -29)
+
+[node name="StaticBody3D231" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23192e-16, -1.22392e-07, 1, -2.48359e-07, 51.9926, 1, -31)
+
+[node name="StaticBody3D233" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23193e-16, -1.42943e-14, 2.04648e-07, 1, 52.9926, 1, -32)
+
+[node name="StaticBody3D240" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23193e-16, -1.42943e-14, 2.04648e-07, 1, 52.9926, 1, -28)
+
+[node name="StaticBody3D241" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23194e-16, 2.49941e-14, -2.92071e-07, -1, 58.9926, 1, -28)
+
+[node name="StaticBody3D242" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.05995e-07, -0.866026, -0.5, -2.8, -4.37114e-08, 1.23194e-16, -6.1196e-08, 0.5, -0.866026, 59.9926, 1, -31)
+
+[node name="StaticBody3D244" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(8.65442e-08, -0.707107, 0.707107, -2.8, -4.37114e-08, 1.23194e-16, 8.65442e-08, -0.707107, -0.707107, 59.9926, 1, -29)
+
+[node name="StaticBody3D243" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23194e-16, 2.49941e-14, -2.92071e-07, -1, 58.9926, 1, -32)
+
+[node name="StaticBody3D234" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.42109e-14, -1.78814e-07, -1, -2.8, -4.37114e-08, -1.53104e-15, -1.22392e-07, 1, -1.78814e-07, 53.9926, 1, -33)
+
+[node name="StaticBody3D235" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.42109e-14, -1.78814e-07, -1, -2.8, -4.37114e-08, -1.53104e-15, -1.22392e-07, 1, -1.78814e-07, 55.9926, 1, -33)
+
+[node name="StaticBody3D236" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.42109e-14, -1.78814e-07, -1, -2.8, -4.37114e-08, -1.53104e-15, -1.22392e-07, 1, -1.78814e-07, 57.9926, 1, -33)
+
+[node name="StaticBody3D237" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-2.49107e-14, 2.66237e-07, 1, -2.8, -4.37114e-08, -1.53104e-15, 1.22392e-07, -1, 2.66237e-07, 57.9926, 1, -27)
+
+[node name="StaticBody3D238" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-2.49107e-14, 2.66237e-07, 1, -2.8, -4.37114e-08, -1.53104e-15, 1.22392e-07, -1, 2.66237e-07, 55.9926, 1, -27)
+
+[node name="StaticBody3D239" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-2.49107e-14, 2.66237e-07, 1, -2.8, -4.37114e-08, -1.53104e-15, 1.22392e-07, -1, 2.66237e-07, 53.9926, 1, -27)
+
+[node name="StaticBody3D232" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.96442e-14, -2.48359e-07, -1, -2.8, -4.37114e-08, 1.23192e-16, -1.22392e-07, 1, -2.48359e-07, 49.9926, 1, -31)
+
+[node name="StaticBody3D222" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23192e-16, 2.49941e-14, -2.92071e-07, -1, 48.9926, 1, -28)
+
+[node name="StaticBody3D223" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23192e-16, 2.49941e-14, -2.92071e-07, -1, 48.9926, 1, -34)
+
+[node name="StaticBody3D224" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23192e-16, 2.49941e-14, -2.92071e-07, -1, 48.9926, 1, -32)
+
+[node name="StaticBody3D225" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -1.78814e-07, -2.8, -4.37114e-08, -1.53104e-15, -1.77636e-14, 1.78814e-07, 1, 38.9926, 1, -32)
+
+[node name="StaticBody3D226" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -1.78814e-07, -2.8, -4.37114e-08, -1.53104e-15, -1.77636e-14, 1.78814e-07, 1, 38.9926, 1, -34)
+
+[node name="StaticBody3D227" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -1.78814e-07, -2.8, -4.37114e-08, -1.53104e-15, -1.77636e-14, 1.78814e-07, 1, 38.9926, 1, -30)
+
+[node name="StaticBody3D228" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -1.78814e-07, -2.8, -4.37114e-08, -1.53104e-15, -1.77636e-14, 1.78814e-07, 1, 38.9926, 1, -28)
+
+[node name="StaticBody3D212" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23192e-16, 2.49941e-14, -2.92071e-07, -1, 44.9926, 1, -38)
+
+[node name="StaticBody3D174" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 12.9926, 1, -44)
+
+[node name="StaticBody3D160" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23191e-16, 2.49941e-14, -2.92071e-07, -1, 8.99262, 1, -40)
+
+[node name="StaticBody3D161" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23191e-16, 2.49941e-14, -2.92071e-07, -1, 8.99262, 1, -38)
+
+[node name="StaticBody3D162" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 2.92071e-07, -2.8, -4.37114e-08, 1.23191e-16, 2.49941e-14, -2.92071e-07, -1, 8.99262, 1, -36)
+
+[node name="StaticBody3D134" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 2.99262, 1, -26)
+
+[node name="StaticBody3D135" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 2.99262, 1, -30)
+
+[node name="StaticBody3D138" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 2.99262, 1, -32)
+
+[node name="StaticBody3D140" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 2.99262, 1, -34)
+
+[node name="StaticBody3D141" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 2.99262, 1, -36)
+
+[node name="StaticBody3D142" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94435e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 3.99262, 1, -37)
+
+[node name="StaticBody3D143" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 4.99262, 1, -38)
+
+[node name="StaticBody3D146" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94435e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.2319e-16, 1.22392e-07, -1, 1.60936e-07, 5.99262, 1, -39)
+
+[node name="StaticBody3D144" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.2319e-16, -1.42943e-14, 2.04648e-07, 1, 6.99262, 1, -38)
+
+[node name="StaticBody3D145" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.2319e-16, -1.42943e-14, 2.04648e-07, 1, 6.99262, 1, -36)
+
+[node name="StaticBody3D136" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 2.99262, 1, -28)
+
+[node name="StaticBody3D137" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 2.99262, 1, -26)
+
+[node name="StaticBody3D139" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 2.99262, 1, -28)
+
+[node name="StaticBody3D51" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 7.99262, 1, -31)
+
+[node name="StaticBody3D59" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 9.99262, 1, -31)
+
+[node name="StaticBody3D60" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 11.9926, 1, -31)
+
+[node name="StaticBody3D61" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 13.9926, 1, -31)
+
+[node name="StaticBody3D53" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 7.99262, 1, -29)
+
+[node name="StaticBody3D56" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 9.99262, 1, -29)
+
+[node name="StaticBody3D57" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 11.9926, 1, -29)
+
+[node name="StaticBody3D72" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 11.9926, 1, -31)
+
+[node name="StaticBody3D73" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 9.99262, 1, -31)
+
+[node name="StaticBody3D74" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 7.99262, 1, -31)
+
+[node name="StaticBody3D75" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 5.99262, 1, -31)
+
+[node name="StaticBody3D58" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 13.9926, 1, -29)
+
+[node name="StaticBody3D62" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 16.9926, 1, -28)
+
+[node name="StaticBody3D63" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 16.9926, 1, -32)
+
+[node name="StaticBody3D64" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 16.9926, 1, -34)
+
+[node name="StaticBody3D65" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 16.9926, 1, -36)
+
+[node name="StaticBody3D66" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.7555e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 13.9926, 1, -35)
+
+[node name="StaticBody3D76" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 14.9926, 1, -36)
+
+[node name="StaticBody3D111" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 13.9926, 1, -37)
+
+[node name="StaticBody3D112" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 11.9926, 1, -37)
+
+[node name="StaticBody3D113" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 10.9926, 1, -38)
+
+[node name="StaticBody3D114" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 10.9926, 1, -40)
+
+[node name="StaticBody3D115" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.7555e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 11.9926, 1, -41)
+
+[node name="StaticBody3D116" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.7555e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 13.9926, 1, -41)
+
+[node name="StaticBody3D117" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.7555e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 15.9926, 1, -41)
+
+[node name="StaticBody3D118" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 5.96046e-08, -2.8, -4.37114e-08, 2.46381e-16, 3.55271e-15, -5.96046e-08, -1, 16.9926, 1, -40)
+
+[node name="StaticBody3D119" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 5.96046e-08, -2.8, -4.37114e-08, 2.46381e-16, 3.55271e-15, -5.96046e-08, -1, 16.9926, 1, -38)
+
+[node name="StaticBody3D77" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 14.9926, 1, -28)
+
+[node name="StaticBody3D78" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 13.298, 1, -23.9789)
+
+[node name="StaticBody3D82" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 13.298, 1, -21.9789)
+
+[node name="StaticBody3D83" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 13.298, 1, -19.9789)
+
+[node name="StaticBody3D84" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 13.298, 1, -17.9789)
+
+[node name="StaticBody3D85" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.7555e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 12.298, 1, -16.9789)
+
+[node name="StaticBody3D86" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 11.298, 1, -15.9789)
+
+[node name="StaticBody3D87" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 12.298, 1, -14.9789)
+
+[node name="StaticBody3D88" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, -1.39091e-08, 14.298, 1, -14.9789)
+
+[node name="StaticBody3D89" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 15.298, 1, -15.9789)
+
+[node name="StaticBody3D90" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 15.298, 1, -17.9789)
+
+[node name="StaticBody3D91" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 15.298, 1, -19.9789)
+
+[node name="StaticBody3D92" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 15.298, 1, -21.9789)
+
+[node name="StaticBody3D93" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -6.47858e-08, -2.8, -4.37114e-08, 1.3851e-16, -1.78053e-14, 5.76205e-08, -1.12435, 15.298, 1, -23.9789)
+
+[node name="StaticBody3D96" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -3.35083e-08, -2.8, -4.37114e-08, 1.3851e-16, 7.10543e-15, 2.98023e-08, 1.12435, 15.298, 1, -23.9789)
+
+[node name="StaticBody3D97" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -3.35083e-08, -2.8, -4.37114e-08, 1.3851e-16, 7.10543e-15, 2.98023e-08, 1.12435, 15.298, 1, -21.9789)
+
+[node name="StaticBody3D98" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(2.50776e-15, -1.39091e-08, 1.12435, -2.8, -4.37114e-08, 1.3851e-16, 1.22392e-07, -1, -1.56387e-08, 16.298, 1, -20.9789)
+
+[node name="StaticBody3D99" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(2.50776e-15, -1.39091e-08, 1.12435, -2.8, -4.37114e-08, 1.3851e-16, 1.22392e-07, -1, -1.56387e-08, 17.9487, 1, -20.9789)
+
+[node name="StaticBody3D100" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -6.47858e-08, -2.8, -4.37114e-08, 1.3851e-16, 2.08992e-15, 5.76205e-08, -1.12435, 18.9951, 1, -21.9789)
+
+[node name="StaticBody3D101" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -6.47858e-08, -2.8, -4.37114e-08, 1.3851e-16, 2.08992e-15, 5.76205e-08, -1.12435, 19.0257, 1, -23.9789)
+
+[node name="StaticBody3D102" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -6.47858e-08, -2.8, -4.37114e-08, 1.3851e-16, 2.08992e-15, 5.76205e-08, -1.12435, 19.0452, 1, -25.9789)
+
+[node name="StaticBody3D103" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -3.35083e-08, -2.8, -4.37114e-08, 1.3851e-16, -1.27898e-14, 2.98023e-08, 1.12435, 16.9487, 1, -25.9789)
+
+[node name="StaticBody3D104" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.81397e-14, -7.35137e-08, -0.899483, -2.8, -4.37114e-08, 1.10808e-16, -1.22392e-07, 1, -6.61243e-08, 16.0948, 1, -24.9789)
+
+[node name="StaticBody3D94" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.24554e-14, -1.39091e-08, 0.912987, -2.8, -4.37114e-08, 1.12471e-16, 1.22392e-07, -1, -1.26988e-08, 16.1291, 1, -25.0175)
+
+[node name="StaticBody3D95" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 17.0019, 1, -26.1075)
+
+[node name="StaticBody3D105" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 16.9426, 1, -28.0241)
+
+[node name="StaticBody3D106" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.2319e-16, 3.59442e-15, -1.17225e-07, -1, 21.0019, 1, -28.0241)
+
+[node name="StaticBody3D107" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.2319e-16, 1.22392e-07, -1, 1.60936e-07, 20.0019, 1, -27.0241)
+
+[node name="StaticBody3D108" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.7555e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.2319e-16, -1.22392e-07, 1, -7.35137e-08, 20.0019, 1, -31.0241)
+
+[node name="StaticBody3D110" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.7555e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.2319e-16, -1.22392e-07, 1, -7.35137e-08, 18.0019, 1, -31.0241)
+
+[node name="StaticBody3D109" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.2319e-16, 3.59442e-15, -1.17225e-07, -1, 21.0019, 1, -30.0241)
+
+[node name="StaticBody3D81" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 13.0086, 1, -25.9789)
+
+[node name="StaticBody3D80" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 12.314, 1, -24.9949)
+
+[node name="StaticBody3D79" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.7555e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 13.9926, 1, -26.9949)
+
+[node name="StaticBody3D67" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.7555e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 11.9926, 1, -35)
+
+[node name="StaticBody3D68" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, 10.9926, 1, -34)
+
+[node name="StaticBody3D69" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 12.9926, 1, -32)
+
+[node name="StaticBody3D70" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-8.94435e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 13.9926, 1, -33)
+
+[node name="StaticBody3D71" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.04648e-07, -2.8, -4.37114e-08, 1.23191e-16, -1.42943e-14, 2.04648e-07, 1, 14.9926, 1, -32)
+
+[node name="StaticBody3D54" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 6.99262, 1, -28)
+
+[node name="StaticBody3D55" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.22392e-07, -1, -5.76205e-08, -2.8, -4.37114e-08, 1.23191e-16, -1.78053e-14, 5.76205e-08, -1, 6.99262, 1, -26)
+
+[node name="StaticBody3D52" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.75551e-15, -7.35137e-08, -1, -2.8, -4.37114e-08, 1.23191e-16, -1.22392e-07, 1, -7.35137e-08, 5.99262, 1, -31)
+
+[node name="StaticBody3D44" type="StaticBody3D" parent="murs/7"]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 6.99262, 1, -22)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/7/StaticBody3D44"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/7/StaticBody3D44"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D45" type="StaticBody3D" parent="murs/7"]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 6.99262, 1, -20)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/7/StaticBody3D45"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/7/StaticBody3D45"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D46" type="StaticBody3D" parent="murs/7"]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 6.99262, 1, -18)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/7/StaticBody3D46"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/7/StaticBody3D46"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D47" type="StaticBody3D" parent="murs/7"]
+transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 6.99262, 1, -16)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="murs/7/StaticBody3D47"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="murs/7/StaticBody3D47"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="sols" type="Node3D" parent="."]
+
+[node name="sol 1" type="Node3D" parent="sols"]
+
+[node name="StaticBody3D" parent="sols/sol 1" instance=ExtResource("4_gd0hk")]
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="sols/sol 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.00738, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 1/StaticBody3D2"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 1/StaticBody3D2"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="sols/sol 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98976, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 1/StaticBody3D3"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 1/StaticBody3D3"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="sols/sol 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98976, 0, -2)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 1/StaticBody3D4"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 1/StaticBody3D4"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="sols/sol 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102444, 0, -2)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 1/StaticBody3D5"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 1/StaticBody3D5"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="sols/sol 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01024, 0, -2)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 1/StaticBody3D6"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 1/StaticBody3D6"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="sols/sol 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01024, 0, -4)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 1/StaticBody3D7"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 1/StaticBody3D7"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="sols/sol 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102444, 0, -4)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 1/StaticBody3D8"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 1/StaticBody3D8"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="sols/sol 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98976, 0, -4)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 1/StaticBody3D9"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 1/StaticBody3D9"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="sol 2" type="Node3D" parent="sols"]
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="sols/sol 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102444, 0, -6)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 2/StaticBody3D10"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 2/StaticBody3D10"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="sols/sol 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102444, 0, -8)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 2/StaticBody3D11"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 2/StaticBody3D11"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="sols/sol 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102444, 0, -10)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 2/StaticBody3D12"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 2/StaticBody3D12"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D13" type="StaticBody3D" parent="sols/sol 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102444, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 2/StaticBody3D13"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 2/StaticBody3D13"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D14" type="StaticBody3D" parent="sols/sol 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98976, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 2/StaticBody3D14"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 2/StaticBody3D14"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D15" type="StaticBody3D" parent="sols/sol 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98976, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 2/StaticBody3D15"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 2/StaticBody3D15"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="sol 3" type="Node3D" parent="sols"]
+
+[node name="StaticBody3D16" type="StaticBody3D" parent="sols/sol 3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98976, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 3/StaticBody3D16"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 3/StaticBody3D16"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D17" type="StaticBody3D" parent="sols/sol 3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98976, 0, -14)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 3/StaticBody3D17"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 3/StaticBody3D17"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D18" type="StaticBody3D" parent="sols/sol 3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.98976, 0, -14)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 3/StaticBody3D18"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 3/StaticBody3D18"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D19" type="StaticBody3D" parent="sols/sol 3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.98976, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/sol 3/StaticBody3D19"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/sol 3/StaticBody3D19"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="4" type="Node3D" parent="sols"]
+
+[node name="StaticBody3D20" type="StaticBody3D" parent="sols/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.98976, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/4/StaticBody3D20"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/4/StaticBody3D20"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D21" type="StaticBody3D" parent="sols/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9898, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/4/StaticBody3D21"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/4/StaticBody3D21"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D22" type="StaticBody3D" parent="sols/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9898, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/4/StaticBody3D22"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/4/StaticBody3D22"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D23" type="StaticBody3D" parent="sols/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9898, 0, -12)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/4/StaticBody3D23"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/4/StaticBody3D23"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D24" type="StaticBody3D" parent="sols/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9898, 0, -10)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/4/StaticBody3D24"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/4/StaticBody3D24"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D25" type="StaticBody3D" parent="sols/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9898, 0, -8)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/4/StaticBody3D25"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/4/StaticBody3D25"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D26" type="StaticBody3D" parent="sols/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9898, 0, -8)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/4/StaticBody3D26"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/4/StaticBody3D26"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D27" type="StaticBody3D" parent="sols/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9898, 0, -8)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/4/StaticBody3D27"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/4/StaticBody3D27"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="5" type="Node3D" parent="sols"]
+
+[node name="StaticBody3D28" type="StaticBody3D" parent="sols/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.98976, 0, -8)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/5/StaticBody3D28"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/5/StaticBody3D28"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D29" type="StaticBody3D" parent="sols/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.98976, 0, -8)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/5/StaticBody3D29"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/5/StaticBody3D29"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D30" type="StaticBody3D" parent="sols/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.98976, 0, -10)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/5/StaticBody3D30"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/5/StaticBody3D30"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D31" type="StaticBody3D" parent="sols/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98976, 0, -10)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/5/StaticBody3D31"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/5/StaticBody3D31"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="6" type="Node3D" parent="sols"]
+
+[node name="StaticBody3D32" type="StaticBody3D" parent="sols/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98976, 0, -10)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/6/StaticBody3D32"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/6/StaticBody3D32"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D33" type="StaticBody3D" parent="sols/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98976, 0, -10)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/6/StaticBody3D33"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/6/StaticBody3D33"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D34" type="StaticBody3D" parent="sols/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98976, 0, -8)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/6/StaticBody3D34"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/6/StaticBody3D34"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="7" type="Node3D" parent="sols"]
+
+[node name="StaticBody3D20" type="StaticBody3D" parent="sols/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98976, 0, -16)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/7/StaticBody3D20"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/7/StaticBody3D20"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D21" type="StaticBody3D" parent="sols/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98976, 0, -18)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/7/StaticBody3D21"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/7/StaticBody3D21"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D22" type="StaticBody3D" parent="sols/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98976, 0, -20)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/7/StaticBody3D22"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/7/StaticBody3D22"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D23" type="StaticBody3D" parent="sols/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98976, 0, -22)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/7/StaticBody3D23"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/7/StaticBody3D23"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D24" type="StaticBody3D" parent="sols/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98976, 0, -24)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sols/7/StaticBody3D24"]
+mesh = SubResource("PlaneMesh_r1sxm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sols/7/StaticBody3D24"]
+transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_tqaxj")
+
+[node name="StaticBody3D25" parent="sols/7" instance=ExtResource("4_gd0hk")]
+
+[node name="piece 8et9" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1.05659, 0, 0, 0, 1, 0, 0, 0, 1, 12.2333, 0, -24)
+
+[node name="StaticBody3D2" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97588, 0, 0)
+
+[node name="StaticBody3D5" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97588, 0, 2)
+
+[node name="StaticBody3D6" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97608, 0, 2)
+
+[node name="StaticBody3D7" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00198555, 0, 4)
+
+[node name="StaticBody3D8" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00198555, 0, 6)
+
+[node name="StaticBody3D9" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97588, 0, 4)
+
+[node name="StaticBody3D18" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1.21991, 0, 0, 0, 1, 0, 0, 0, 1, -1.95022, 0, 6)
+
+[node name="StaticBody3D19" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97608, 0, 4)
+
+[node name="StaticBody3D10" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.11265e-07, -0.902695, 7.94752e-08, -2.8, -4.34039e-08, 0, 1.06998e-14, -8.68077e-08, -1, 1.00735, 1, 2)
+
+[node name="StaticBody3D25" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.11265e-07, -0.902695, 7.94752e-08, -2.8, -4.34039e-08, 0, 1.06998e-14, -8.68077e-08, -1, 1.00735, 1, 0)
+
+[node name="StaticBody3D26" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.39068e-14, -3.9458e-08, -0.909091, -2.8, -4.34039e-08, -3.10588e-22, -1.22392e-07, 0.992965, -4.37114e-08, 0.0982618, 1, -1)
+
+[node name="StaticBody3D27" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.39068e-14, -3.9458e-08, -0.909091, -2.8, -4.34039e-08, -3.10588e-22, -1.22392e-07, 0.992965, -4.37114e-08, -1.71992, 1, -1)
+
+[node name="StaticBody3D28" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.39068e-14, -3.9458e-08, -1.45455, -2.8, -4.34039e-08, -4.96941e-22, -1.22392e-07, 0.992965, -6.99382e-08, -3.5381, 1, -1)
+
+[node name="StaticBody3D11" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.11265e-07, -0.902695, 7.94752e-08, -2.8, -4.34039e-08, 0, 1.06998e-14, -8.68077e-08, -1, 1.00735, 1, 4)
+
+[node name="StaticBody3D12" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(1.11265e-07, -0.902695, 7.94752e-08, -2.8, -4.34039e-08, 0, 1.06998e-14, -8.68077e-08, -1, 1.00735, 1, 6)
+
+[node name="StaticBody3D13" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.45907e-14, 1.19213e-07, 0.902695, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 1.30212e-07, 0.104657, 1, 7)
+
+[node name="StaticBody3D14" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.45907e-14, 1.19213e-07, 1.48027, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 2.13526e-07, -2.21599, 1, 7)
+
+[node name="StaticBody3D22" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.45907e-14, 1.19213e-07, 1.17684, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 1.69757e-07, -1.98978, 1, 1)
+
+[node name="StaticBody3D23" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(3.22974e-15, -2.7093e-08, -1.17684, -2.8, -4.37114e-08, -1.19033e-15, -1.22392e-07, 1, -8.9407e-08, -1.98978, 1, 1)
+
+[node name="StaticBody3D15" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.45907e-14, 1.19213e-07, 0.902695, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 1.30212e-07, -4.00925, 1, 6.99821)
+
+[node name="StaticBody3D21" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.45907e-14, 1.19213e-07, 0.902695, -2.8, -4.37114e-08, 0, 1.22392e-07, -1, 1.30212e-07, -4.00925, 1, 1.00857)
+
+[node name="StaticBody3D24" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(2.43178e-14, -1.98688e-07, -0.902695, -2.8, -4.37114e-08, -8.83141e-22, -1.22392e-07, 1, -2.17019e-07, -4.00925, 1, 1.00857)
+
+[node name="StaticBody3D16" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.11265e-07, 0.909091, -1.5895e-07, -2.8, -4.37114e-08, 0, -2.13997e-14, 1.74846e-07, 1, -4.86852, 1, 6)
+
+[node name="StaticBody3D17" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.11265e-07, 0.909091, -1.5895e-07, -2.8, -4.37114e-08, 0, -2.13997e-14, 1.74846e-07, 1, -4.86852, 1, 4)
+
+[node name="StaticBody3D29" parent="piece 8et9" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.11265e-07, 0.909091, -1.5895e-07, -2.8, -4.37114e-08, 0, -2.13997e-14, 1.74846e-07, 1, -4.86852, 1, 2.01186)
+
+[node name="StaticBody3D20" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97608, 0, 6)
+
+[node name="StaticBody3D4" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00198555, 0, 2)
+
+[node name="StaticBody3D" parent="piece 8et9" instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97608, 0, 0)
+
+[node name="StaticBody3D30" parent="piece 8et9" instance=ExtResource("2_cyvka")]
+transform = Transform3D(-0.956535, -8.36229e-08, 3.65528e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0.0703411, 0, 1)
+
+[node name="StaticBody3D25" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -28)
+
+[node name="StaticBody3D26" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -30)
+
+[node name="StaticBody3D27" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -30)
+
+[node name="StaticBody3D28" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -30)
+
+[node name="StaticBody3D29" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -30)
+
+[node name="StaticBody3D30" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -30)
+
+[node name="StaticBody3D31" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -30)
+
+[node name="StaticBody3D32" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -30)
+
+[node name="StaticBody3D50" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -30)
+
+[node name="StaticBody3D51" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -30)
+
+[node name="StaticBody3D52" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -28)
+
+[node name="StaticBody3D53" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -28)
+
+[node name="StaticBody3D54" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -26)
+
+[node name="StaticBody3D55" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -24)
+
+[node name="StaticBody3D56" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -24)
+
+[node name="StaticBody3D57" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -22)
+
+[node name="StaticBody3D58" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -22)
+
+[node name="StaticBody3D34" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -32)
+
+[node name="StaticBody3D35" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -34)
+
+[node name="StaticBody3D37" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -34)
+
+[node name="StaticBody3D38" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -34)
+
+[node name="StaticBody3D39" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -32)
+
+[node name="StaticBody3D65" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -32)
+
+[node name="StaticBody3D66" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -32)
+
+[node name="StaticBody3D67" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -32)
+
+[node name="StaticBody3D70" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -34)
+
+[node name="StaticBody3D71" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -36)
+
+[node name="StaticBody3D72" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -38)
+
+[node name="StaticBody3D73" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -40)
+
+[node name="StaticBody3D74" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -40)
+
+[node name="StaticBody3D90" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -42)
+
+[node name="StaticBody3D91" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -42)
+
+[node name="StaticBody3D92" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -42)
+
+[node name="StaticBody3D93" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -42)
+
+[node name="StaticBody3D94" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -42)
+
+[node name="StaticBody3D95" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -44)
+
+[node name="StaticBody3D98" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -46)
+
+[node name="StaticBody3D99" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -46)
+
+[node name="StaticBody3D100" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -44)
+
+[node name="StaticBody3D101" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -42)
+
+[node name="StaticBody3D102" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -40)
+
+[node name="StaticBody3D116" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -38)
+
+[node name="StaticBody3D117" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -36)
+
+[node name="StaticBody3D118" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -34)
+
+[node name="StaticBody3D119" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -34)
+
+[node name="StaticBody3D120" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -34)
+
+[node name="StaticBody3D121" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -32)
+
+[node name="StaticBody3D122" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -30)
+
+[node name="StaticBody3D123" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -28)
+
+[node name="StaticBody3D124" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -28)
+
+[node name="StaticBody3D125" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -30)
+
+[node name="StaticBody3D126" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -32)
+
+[node name="StaticBody3D127" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -32)
+
+[node name="StaticBody3D128" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -34)
+
+[node name="StaticBody3D129" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -34)
+
+[node name="StaticBody3D130" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -32)
+
+[node name="StaticBody3D131" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -30)
+
+[node name="StaticBody3D138" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -30)
+
+[node name="StaticBody3D139" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, -30)
+
+[node name="StaticBody3D140" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -30)
+
+[node name="StaticBody3D141" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -30)
+
+[node name="StaticBody3D142" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, -30)
+
+[node name="StaticBody3D143" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, -28)
+
+[node name="StaticBody3D144" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -28)
+
+[node name="StaticBody3D145" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -28)
+
+[node name="StaticBody3D146" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -32)
+
+[node name="StaticBody3D147" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -32)
+
+[node name="StaticBody3D148" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, -32)
+
+[node name="StaticBody3D132" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -28)
+
+[node name="StaticBody3D133" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -28)
+
+[node name="StaticBody3D134" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -28)
+
+[node name="StaticBody3D135" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -30)
+
+[node name="StaticBody3D136" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -30)
+
+[node name="StaticBody3D137" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -32)
+
+[node name="StaticBody3D103" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -40)
+
+[node name="StaticBody3D104" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -40)
+
+[node name="StaticBody3D105" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -40)
+
+[node name="StaticBody3D106" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, -40)
+
+[node name="StaticBody3D107" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, -38)
+
+[node name="StaticBody3D108" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, -36)
+
+[node name="StaticBody3D109" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -36)
+
+[node name="StaticBody3D110" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -36)
+
+[node name="StaticBody3D111" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -38)
+
+[node name="StaticBody3D112" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -40)
+
+[node name="StaticBody3D113" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -42)
+
+[node name="StaticBody3D114" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -42)
+
+[node name="StaticBody3D115" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -40)
+
+[node name="StaticBody3D96" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1.3, 0, 0, 0, 1.7, 0, 0, 0, 1.2, 14.002, 0.100311, -46.278)
+
+[node name="StaticBody3D97" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(-5.68248e-08, 0, 1.2, 0, 1.7, 0, -1.3, 0, -5.24537e-08, 39.7316, 0.100311, -46.0282)
+
+[node name="StaticBody3D75" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -40)
+
+[node name="StaticBody3D76" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -38)
+
+[node name="StaticBody3D77" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -38)
+
+[node name="StaticBody3D78" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -36)
+
+[node name="StaticBody3D79" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -34)
+
+[node name="StaticBody3D80" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -32)
+
+[node name="StaticBody3D81" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -30)
+
+[node name="StaticBody3D82" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -28)
+
+[node name="StaticBody3D83" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -26)
+
+[node name="StaticBody3D88" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -26)
+
+[node name="StaticBody3D89" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -28)
+
+[node name="StaticBody3D84" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -24)
+
+[node name="StaticBody3D85" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -24)
+
+[node name="StaticBody3D86" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -26)
+
+[node name="StaticBody3D87" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -28)
+
+[node name="StaticBody3D68" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -32)
+
+[node name="StaticBody3D69" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -30)
+
+[node name="StaticBody3D36" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -36)
+
+[node name="StaticBody3D59" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -38)
+
+[node name="StaticBody3D60" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -38)
+
+[node name="StaticBody3D61" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -38)
+
+[node name="StaticBody3D62" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -40)
+
+[node name="StaticBody3D63" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -40)
+
+[node name="StaticBody3D64" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -40)
+
+[node name="StaticBody3D33" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -28)
+
+[node name="StaticBody3D40" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -26)
+
+[node name="StaticBody3D41" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -26)
+
+[node name="StaticBody3D44" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3038, 0, -24.0858)
+
+[node name="StaticBody3D45" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3038, 0, -22.0858)
+
+[node name="StaticBody3D46" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3038, 0, -20.0858)
+
+[node name="StaticBody3D47" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3038, 0, -18.0858)
+
+[node name="StaticBody3D48" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.03741, 14.3038, 0, -16.088)
+
+[node name="StaticBody3D49" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3038, 0, -16.0395)
+
+[node name="PLAYER" parent="." instance=ExtResource("5_fleoh")]
+transform = Transform3D(-0.708251, 0, 0.274989, 0, 1, 0, -0.271319, 0, -0.717829, 14.8677, 1, -26.3318)
+
+[node name="Camera3D" type="Camera3D" parent="PLAYER"]
+transform = Transform3D(1.31849, 0, 0, 0, 0.994025, 0.109157, 0, -0.142002, 1.29313, 0.00115967, 0.665173, -0.334576)
+fov = 34.9
+
+[node name="StaticBody3D42" parent="." instance=ExtResource("4_gd0hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00826228, 0, 0)
+
+[node name="StaticBody3D43" parent="." instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98023e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98023e-08, 1, -3, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(39.44, 0, 0, 0, -1, 2.53273e-06, 0, -8.74228e-08, -28.971, 22, 4, -28)
+mesh = SubResource("PlaneMesh_mltuo")
