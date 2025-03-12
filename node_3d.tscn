@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://l5for20alufm"]
+
+[ext_resource type="ArrayMesh" uid="uid://bn4f3fon5j246" path="res://MetalBox.obj" id="1_g11ol"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1480k"]
+albedo_color = Color(0.266575, 0.266575, 0.266575, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m70so"]
+albedo_color = Color(0.0383972, 0.0383972, 0.0383972, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0r6bb"]
+albedo_color = Color(0, 0.155677, 0.342466, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MetalBox" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18202, 0, 0.257114)
+mesh = ExtResource("1_g11ol")
+surface_material_override/0 = SubResource("StandardMaterial3D_1480k")
+surface_material_override/1 = SubResource("StandardMaterial3D_m70so")
+surface_material_override/2 = SubResource("StandardMaterial3D_0r6bb")
