@@ -942,6 +942,9 @@ transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.2319
 [node name="StaticBody3D130" parent="murs/7" instance=ExtResource("3_cx13x")]
 transform = Transform3D(1.22392e-07, -1, 1.17225e-07, -2.8, -4.37114e-08, 1.23191e-16, 3.59442e-15, -1.17225e-07, -1, 4.99262, 1, -24)
 
+[node name="StaticBody3D245" parent="murs/7" instance=ExtResource("3_cx13x")]
+transform = Transform3D(-1.22392e-07, 1, -2.98022e-08, -2.8, -4.37114e-08, 1.23191e-16, 7.10543e-15, 2.98022e-08, 1, 4.99262, 1, -24)
+
 [node name="StaticBody3D131" parent="murs/7" instance=ExtResource("3_cx13x")]
 transform = Transform3D(-8.94434e-15, 1.60936e-07, 1, -2.8, -4.37114e-08, 1.23191e-16, 1.22392e-07, -1, 1.60936e-07, 3.99262, 1, -23)
 
