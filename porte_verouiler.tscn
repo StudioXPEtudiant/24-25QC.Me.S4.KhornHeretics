@@ -13,7 +13,7 @@ transform = Transform3D(-4.37114e-08, -1, 0, 0, 0, -1, 1, -4.37114e-08, 0, 5.989
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.98838, 0, 0, 0, 0.105327, 0, 0, 0, 1.9868, 0, 0, 0)
+transform = Transform3D(-8.69148e-08, 0.105327, 0, -1.98838, -4.60399e-09, 0, 0, 0, 1.9868, 0, 0, 0)
 shape = SubResource("HeightMapShape3D_tqaxj")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
