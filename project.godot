@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="khorn heretics"
-run/main_scene="res://Niv. 1.tscn"
+run/main_scene="res://Scene/Niv. 1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Sprite/icon.svg"
