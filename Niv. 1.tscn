@@ -2427,10 +2427,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3038, 0, -16.0395)
 [node name="PLAYER" parent="." instance=ExtResource("5_fleoh")]
 transform = Transform3D(-0.708251, 0, 0.274989, 0, 1, 0, -0.271319, 0, -0.717829, 14.8677, 1, -26.3318)
 
-[node name="Camera3D" type="Camera3D" parent="PLAYER"]
-transform = Transform3D(1.31849, 0, 0, 0, 0.994025, 0.109157, 0, -0.142002, 1.29313, 0.00115967, 0.665173, -0.334576)
-fov = 34.9
-
 [node name="StaticBody3D42" parent="." instance=ExtResource("4_gd0hk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00826228, 0, 0)
 
