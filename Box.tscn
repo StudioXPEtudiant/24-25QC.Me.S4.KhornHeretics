@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://l5for20alufm"]
+[gd_scene load_steps=6 format=3 uid="uid://l5for20alufm"]
 
-[ext_resource type="ArrayMesh" uid="uid://bn4f3fon5j246" path="res://MetalBox.obj" id="1_g11ol"]
+[ext_resource type="ArrayMesh" uid="uid://bn4f3fon5j246" path="res://MetalBox.obj" id="1_4sl6b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_emx4m"]
+size = Vector3(2.00221, 1, 1.99796)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1480k"]
 albedo_color = Color(0.266575, 0.266575, 0.266575, 1)
@@ -11,11 +14,15 @@ albedo_color = Color(0.0383972, 0.0383972, 0.0383972, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0r6bb"]
 albedo_color = Color(0, 0.155677, 0.342466, 1)
 
-[node name="Node3D" type="Node3D"]
+[node name="Box" type="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18557, 0, 0.257431)
+shape = SubResource("BoxShape3D_emx4m")
 
 [node name="MetalBox" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18202, 0, 0.257114)
-mesh = ExtResource("1_g11ol")
+mesh = ExtResource("1_4sl6b")
 surface_material_override/0 = SubResource("StandardMaterial3D_1480k")
 surface_material_override/1 = SubResource("StandardMaterial3D_m70so")
 surface_material_override/2 = SubResource("StandardMaterial3D_0r6bb")
