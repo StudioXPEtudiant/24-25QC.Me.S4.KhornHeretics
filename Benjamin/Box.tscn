@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://l5for20alufm"]
 
-[ext_resource type="ArrayMesh" uid="uid://bn4f3fon5j246" path="res://MetalBox.obj" id="1_4sl6b"]
+[ext_resource type="ArrayMesh" uid="uid://bn4f3fon5j246" path="res://MetalBox.obj" id="1_vj6k1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_emx4m"]
 size = Vector3(2.00221, 2.00757, 1.99796)
@@ -22,7 +22,7 @@ shape = SubResource("BoxShape3D_emx4m")
 
 [node name="MetalBox" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18202, 0, 0.257114)
-mesh = ExtResource("1_4sl6b")
+mesh = ExtResource("1_vj6k1")
 surface_material_override/0 = SubResource("StandardMaterial3D_1480k")
 surface_material_override/1 = SubResource("StandardMaterial3D_m70so")
 surface_material_override/2 = SubResource("StandardMaterial3D_0r6bb")
