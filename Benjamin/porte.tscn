@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0ibjuqwymhn"]
+
+[ext_resource type="ArrayMesh" uid="uid://6612n0okfhtj" path="res://Sprite/Door.obj" id="1_esnk8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6swxy"]
+size = Vector3(1, 7.42212, 1)
+
+[node name="StaticBody3D10" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("1_esnk8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.99873, 0, 0, 0, 0.105875, 0, 0, -4.44089e-16, 1.99714, 0, -0.00228759, -7.56339e-16)
+shape = SubResource("BoxShape3D_6swxy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
