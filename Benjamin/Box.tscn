@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://l5for20alufm"]
+
+[ext_resource type="ArrayMesh" uid="uid://bn4f3fon5j246" path="res://Sprite/MetalBox.obj" id="1_vj6k1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_emx4m"]
+size = Vector3(2.00221, 2, 1.99796)
+
+[node name="Box" type="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18557, -0.010498, 0.257431)
+shape = SubResource("BoxShape3D_emx4m")
+
+[node name="MetalBox" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18202, 0, 0.257114)
+mesh = ExtResource("1_vj6k1")

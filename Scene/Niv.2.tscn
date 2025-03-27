@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqek3c8k0qg83"]
 
-[ext_resource type="PackedScene" uid="uid://bcsjl6f0qf87l" path="res://sol.tscn" id="1_6cba4"]
-[ext_resource type="PackedScene" uid="uid://d0ibjuqwymhn" path="res://porte.tscn" id="2_0dcxj"]
-[ext_resource type="PackedScene" uid="uid://c0yj04rnu0tsm" path="res://mur.tscn" id="3_ntcyc"]
-[ext_resource type="PackedScene" uid="uid://bmru2xipgbu25" path="res://porte_verouiler.tscn" id="4_ok6bh"]
+[ext_resource type="PackedScene" uid="uid://bcsjl6f0qf87l" path="res://Sprite/sol.tscn" id="1_6cba4"]
+[ext_resource type="PackedScene" uid="uid://d0ibjuqwymhn" path="res://Benjamin/porte.tscn" id="2_0dcxj"]
+[ext_resource type="PackedScene" uid="uid://c0yj04rnu0tsm" path="res://Sprite/mur.tscn" id="3_ntcyc"]
+[ext_resource type="PackedScene" uid="uid://bmru2xipgbu25" path="res://Benjamin/porte_verouiler.tscn" id="4_ok6bh"]
 
 [node name="Node3D" type="Node3D"]
 
