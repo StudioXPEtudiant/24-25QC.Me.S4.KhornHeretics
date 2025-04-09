@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg6513xmbmm1t"]
+
+[ext_resource type="PackedScene" uid="uid://djlhenrxi1xp4" path="res://Benjamin/impostor_player.tscn" id="1_3cxs3"]
+[ext_resource type="PackedScene" uid="uid://d0ibjuqwymhn" path="res://Benjamin/porte.tscn" id="2_jlr6s"]
+[ext_resource type="PackedScene" uid="uid://bnoc01vhas4am" path="res://Benjamin/floor___.tscn" id="3_ysfxq"]
+
+[node name="Test_scene" type="Node3D"]
+
+[node name="Impostor_Player" parent="." instance=ExtResource("1_3cxs3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -6)
+
+[node name="StaticBody3D10" parent="." instance=ExtResource("2_jlr6s")]
+
+[node name="Floor___" parent="." instance=ExtResource("3_ysfxq")]
+transform = Transform3D(8.53412, 0, 0, 0, 1, 0, 0, 0, 11.7696, -4.36045, -1.0699, -3.57498)

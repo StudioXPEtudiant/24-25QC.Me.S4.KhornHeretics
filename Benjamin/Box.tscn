@@ -1,9 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://l5for20alufm"]
+[gd_scene load_steps=6 format=3 uid="uid://l5for20alufm"]
 
 [ext_resource type="ArrayMesh" uid="uid://bn4f3fon5j246" path="res://Sprite/MetalBox.obj" id="1_vj6k1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_emx4m"]
 size = Vector3(2.00221, 2, 1.99796)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k1s6c"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_froua"]
+albedo_color = Color(0.255659, 0.255659, 0.255659, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eud7y"]
+albedo_color = Color(0, 0.241969, 0.542748, 1)
 
 [node name="Box" type="Node3D"]
 
@@ -14,3 +23,6 @@ shape = SubResource("BoxShape3D_emx4m")
 [node name="MetalBox" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18202, 0, 0.257114)
 mesh = ExtResource("1_vj6k1")
+surface_material_override/0 = SubResource("StandardMaterial3D_k1s6c")
+surface_material_override/1 = SubResource("StandardMaterial3D_froua")
+surface_material_override/2 = SubResource("StandardMaterial3D_eud7y")

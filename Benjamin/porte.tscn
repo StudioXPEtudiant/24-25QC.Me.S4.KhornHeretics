@@ -1,12 +1,53 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0ibjuqwymhn"]
+[gd_scene load_steps=8 format=3 uid="uid://d0ibjuqwymhn"]
 
 [ext_resource type="ArrayMesh" uid="uid://6612n0okfhtj" path="res://Sprite/Door.obj" id="1_esnk8"]
+[ext_resource type="Script" path="res://Benjamin/Door.gd" id="2_bfks6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6swxy"]
-size = Vector3(1, 7.42212, 1)
+size = Vector3(1.9834, 0.842153, 1.99216)
+
+[sub_resource type="Animation" id="Animation_6ncdn"]
+resource_name = "Door"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(2, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_llafg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2fwk1"]
+_data = {
+"Door": SubResource("Animation_6ncdn"),
+"RESET": SubResource("Animation_llafg")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fadya"]
+radius = 0.924169
+height = 2.79285
 
 [node name="StaticBody3D10" type="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1.00057, 0, 0, 0, -4.37363e-08, -1.00057, 0, 1.00057, -4.37363e-08, 0, 0, 0)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -14,7 +55,16 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 mesh = ExtResource("1_esnk8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.99873, 0, 0, 0, 0.105875, 0, 0, -4.44089e-16, 1.99714, 0, -0.00228759, -7.56339e-16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0112305, -0.0105469, 0.00605771)
 shape = SubResource("BoxShape3D_6swxy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2fwk1")
+}
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("2_bfks6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_fadya")
