@@ -10,35 +10,6 @@ config_version=5
 
 [application]
 
-config/name="khorn heretics"
-run/main_scene="res://Scene/Niv. 1.tscn"
+config/name="24-25qc.me.s 4.khorn Heretics"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Sprite/icon.svg"
-
-[input]
-
-Up={
-"deadzone": 0.5,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":-1.0,"script":null)
-]
-}
-Down={
-"deadzone": 0.5,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":1.0,"script":null)
-]
-}
-Left={
-"deadzone": 0.5,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":-1.0,"script":null)
-]
-}
-Right={
-"deadzone": 0.5,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":1.0,"script":null)
-]
-}
-Jump={
-"deadzone": 0.5,
-"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
-]
-}
+config/icon="res://icon.svg"
