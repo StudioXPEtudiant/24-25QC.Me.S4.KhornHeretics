@@ -1,0 +1,256 @@
+[gd_scene load_steps=19 format=3 uid="uid://c3lguatj7fak7"]
+
+[ext_resource type="Script" path="res://Benjamin/Script/player.gd" id="1_gvh7b"]
+[ext_resource type="ArrayMesh" uid="uid://dwp1srn7762rd" path="res://Benjamin/Pistole.obj" id="2_3qcoe"]
+[ext_resource type="Texture2D" uid="uid://d0tdt860q68gu" path="res://Benjamin/pistolflash2 (2).png" id="3_0bxsu"]
+[ext_resource type="Script" path="res://Benjamin/Script/reticle.gd" id="4_i6xt3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3k78l"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e61rr"]
+
+[sub_resource type="Gradient" id="Gradient_njy7x"]
+offsets = PackedFloat32Array(0, 0.0592593, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.821789, 0.821789, 0.821789, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w02f2"]
+gradient = SubResource("Gradient_njy7x")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_46kgp"]
+angle_min = 45.0
+angle_max = 45.0
+gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_w02f2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_du1wx"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0.824271, 0.242082, 1)
+albedo_texture = ExtResource("3_0bxsu")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ag8s7"]
+material = SubResource("StandardMaterial3D_du1wx")
+size = Vector2(0.5, 0.5)
+orientation = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ty2q"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxsdx"]
+bg_color = Color(5.19812e-06, 0.786085, 0.886347, 1)
+
+[sub_resource type="Animation" id="Animation_w6e8o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/Pistole:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.742517, -0.295936, -0.723)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D/Pistole:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tg1g4"]
+resource_name = "fire"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/Pistole:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0.742517, -0.295936, -0.62401), Vector3(0.742517, -0.295936, -0.723)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D/Pistole:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_q7jky"]
+resource_name = "idle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/Pistole:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.742517, -0.295936, -0.723), Vector3(0.742517, -0.377557, -0.723)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D/Pistole:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ishl5"]
+resource_name = "move"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/Pistole:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector3(0.742517, -0.295936, -0.723), Vector3(0.686005, -0.268519, -0.723)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pk27s"]
+_data = {
+"RESET": SubResource("Animation_w6e8o"),
+"fire": SubResource("Animation_tg1g4"),
+"idle": SubResource("Animation_q7jky"),
+"move": SubResource("Animation_ishl5")
+}
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1_gvh7b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3k78l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_e61rr")
+skeleton = NodePath("../..")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="Camera3D"]
+update_mode = 1
+
+[node name="Pistole" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.742517, -0.295936, -0.723)
+mesh = ExtResource("2_3qcoe")
+skeleton = NodePath("../..")
+
+[node name="MuzzleFlash" type="GPUParticles3D" parent="Camera3D/Pistole"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0651023, -0.330606)
+emitting = false
+amount = 1
+lifetime = 0.25
+one_shot = true
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_46kgp")
+draw_pass_1 = SubResource("PlaneMesh_ag8s7")
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera3D"]
+offset_left = 628.0
+offset_top = 323.0
+offset_right = 629.0
+offset_bottom = 324.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0ty2q")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lxsdx")
+value = 100.0
+show_percentage = false
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -50)
+collision_mask = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pk27s")
+}
+autoplay = "idle"
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="UserInterface" node_paths=PackedStringArray("RETICLE_LINES", "PLAYER_CONTROLLER")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_i6xt3")
+RETICLE_LINES = [NodePath("Top"), NodePath("Right"), NodePath("Bottom"), NodePath("Left")]
+PLAYER_CONTROLLER = NodePath("../..")
+DOT_RADIUS = 5.0
+
+[node name="Top" type="Line2D" parent="UserInterface/CenterContainer"]
+points = PackedVector2Array(0, -10, 0, -15, 0, -25)
+width = 5.0
+default_color = Color(0, 1, 1, 1)
+
+[node name="Right" type="Line2D" parent="UserInterface/CenterContainer"]
+points = PackedVector2Array(10, 0, 15, 0, 25, 0)
+closed = true
+width = 5.0
+default_color = Color(0, 1, 1, 1)
+
+[node name="Bottom" type="Line2D" parent="UserInterface/CenterContainer"]
+points = PackedVector2Array(0, 10, 0, 15, 0, 25)
+width = 5.0
+default_color = Color(0, 1, 1, 1)
+
+[node name="Left" type="Line2D" parent="UserInterface/CenterContainer"]
+points = PackedVector2Array(-10, 0, -15, 0, -25, 0)
+width = 5.0
+default_color = Color(0, 1, 1, 1)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
