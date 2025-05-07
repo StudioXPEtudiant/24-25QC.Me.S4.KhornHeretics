@@ -153,7 +153,7 @@ _data = {
 "move": SubResource("Animation_ishl5")
 }
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_gvh7b")
 

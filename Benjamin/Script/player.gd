@@ -26,6 +26,7 @@ func _unhandled_input(event):
 		if raycast.is_colliding():
 			var hit_player = raycast.get_collider()
 			hit_player.receive_damage()
+			emit_signal("interacted")
 	
 	
 	if Input.is_action_just_pressed("ESC"):
@@ -42,6 +43,8 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
