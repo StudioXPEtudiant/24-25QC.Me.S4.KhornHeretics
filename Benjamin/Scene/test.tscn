@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c3lguatj7fak7" path="res://Benjamin/Scene/player.tscn" id="1_ufpo5"]
 [ext_resource type="PackedScene" uid="uid://tjrakfwb8ilj" path="res://Benjamin/Scene/floor.tscn" id="2_g64qr"]
-[ext_resource type="PackedScene" uid="uid://b4tywpm5ip32v" path="res://Damien/door.tscn" id="3_3xstm"]
+[ext_resource type="PackedScene" uid="uid://b4tywpm5ip32v" path="res://Benjamin/Scene/door.tscn" id="3_3xstm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t5lve"]
 sky_top_color = Color(0.222198, 0.419843, 0.842554, 1)
@@ -28,10 +28,10 @@ transform = Transform3D(-0.762745, -0.144575, 0.630332, 0.410146, 0.645445, 0.64
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_ufpo5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.447446, 6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.447446, 2, 0)
 
 [node name="Floor" parent="." instance=ExtResource("2_g64qr")]
-transform = Transform3D(100, 0, 0, 0, 10, 0, 0, 0, 100, 0, 0, 0)
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
 
 [node name="Door" parent="." instance=ExtResource("3_3xstm")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2, 7, -11.005)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2, 2, -11.005)
