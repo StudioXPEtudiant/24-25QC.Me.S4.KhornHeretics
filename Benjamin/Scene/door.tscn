@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4tywpm5ip32v"]
+
+[ext_resource type="ArrayMesh" uid="uid://jtwsky77lhmg" path="res://Benjamin/Door.obj" id="1_k5dmd"]
+[ext_resource type="Script" path="res://Benjamin/Script/Door.gd" id="2_ouke8"]
+
+[sub_resource type="Animation" id="Animation_r7y80"]
+resource_name = "Open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGBox3D/AnimatableBody3D/Door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.251328, 0), Vector3(0, -1.25133, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CSGBox3D/AnimatableBody3D/Door:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_22e56"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGBox3D/AnimatableBody3D/Door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.251328, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CSGBox3D/AnimatableBody3D/Door:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nh76k"]
+resource_name = "Close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGBox3D/AnimatableBody3D/Door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.25133, 0), Vector3(0, -0.251328, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4t3n0"]
+_data = {
+"Close": SubResource("Animation_nh76k"),
+"Open": SubResource("Animation_r7y80"),
+"RESET": SubResource("Animation_22e56")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jgm13"]
+radius = 2.0
+
+[node name="Door" type="StaticBody3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.111328, 0)
+use_collision = true
+size = Vector3(2, 1.5, 0.2)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+operation = 2
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="CSGBox3D"]
+
+[node name="Door" type="MeshInstance3D" parent="CSGBox3D/AnimatableBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.251328, 0)
+mesh = ExtResource("1_k5dmd")
+skeleton = NodePath("../../..")
+
+[node name="DoorComponent" type="Node" parent="CSGBox3D/AnimatableBody3D"]
+script = ExtResource("2_ouke8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CSGBox3D/AnimatableBody3D"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_4t3n0")
+}
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.14, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_jgm13")
+
+[connection signal="body_entered" from="Area3D" to="CSGBox3D/AnimatableBody3D/DoorComponent" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="CSGBox3D/AnimatableBody3D/DoorComponent" method="_on_area_3d_body_exited"]
